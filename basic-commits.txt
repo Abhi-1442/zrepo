@@ -1,0 +1,168 @@
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1 (master)
+$ cd git-katas/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd basic-commits
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/basic-commits/exercise/.git/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ ls -a
+./  ../  .git/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ touch sample.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sample.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git add sample.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   sample.txt
+
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git commit -m "Created a sample file"
+[master (root-commit) 8b5af08] Created a sample file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sample.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ echo "Hi There" >> sample.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ cat sample.txt
+Hi There
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git add sample.txt
+warning: in the working copy of 'sample.txt', LF will be replaced by CRLF the next time Git touches it
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ echo "How are you?" >> sample.txt
+
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$
+q
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ cat sample.txt
+Hi There
+How are you?
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   sample.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.txt
+
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git commit -m "added some info into file"
+[master 6f427f5] added some info into file
+ 1 file changed, 1 insertion(+)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git add sample.txt
+warning: in the working copy of 'sample.txt', LF will be replaced by CRLF the next time Git touches it
+g
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   sample.txt
+
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git commit -m "Added data"
+[master e4ff9b2] Added data
+ 1 file changed, 1 insertion(+)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-commits/exercise (master)
+$ git log
+commit e4ff9b205568ba18374c92c4ef4e80e325f43bd4 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:11:04 2022 +0530
+
+    Added data
+
+commit 6f427f5a29fbb386b8112b7964300671702d3b6b
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:10:35 2022 +0530
+
+    added some info into file
+
+commit 8b5af081689ef6e4458c32974bb2a3779daa0ea0
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:08:23 2022 +0530
+
+    Created a sample file
