@@ -1,0 +1,155 @@
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd basic-branching/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching (master)
+$ source setup.sh
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-branching’
+Try 'basename --help' for more information.
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/basic-branching/exercise/.git/
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-branching/exercise’
+Try 'basename --help' for more information.
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-branching/exercise’
+Try 'basename --help' for more information.
+warning: in the working copy of 'dummy.txt', LF will be replaced by CRLF the next time Git touches it
+[master (root-commit) b1101be] dummy commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dummy.txt
+Switched to a new branch 'second-branch'
+Switched to branch 'master'
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-branching/exercise’
+Try 'basename --help' for more information.
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-branching/exercise’
+Try 'basename --help' for more information.
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git branch
+* master
+  second-branch
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git branch mybranch
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git branch
+* master
+  mybranch
+  second-branch
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ git status
+On branch mybranch
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ git switch master
+
+Switched to branch 'master'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ ls -a
+./  ../  .git/  dummy.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ cat dummy.txt
+dummy
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git switch mmybranch
+fatal: invalid reference: mmybranch
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ ls -a
+./  ../  .git/  dummy.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ cat dummy.txt
+dummy
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ touch file1.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ git add file1.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ git commit -m "created a new file name file1"
+[mybranch 478d80f] created a new file name file1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ git log
+commit 478d80f641d1cfb80702ce0d51598bd513ae3e30 (HEAD -> mybranch)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:22:58 2022 +0530
+
+    created a new file name file1
+
+commit b1101be8edd167383e4c6af04aa75a27292b9a41 (second-branch, master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:20:07 2022 +0530
+
+    dummy commit
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ git log --oneline --graph
+* 478d80f (HEAD -> mybranch) created a new file name file1
+* b1101be (second-branch, master) dummy commit
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ git switch master
+Switched to branch 'master'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git log --oneline --graph
+* b1101be (HEAD -> master, second-branch) dummy commit
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ touch file2.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git add file2.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git commit -m "Created file2 text file"
+[master f5c63f5] Created file2 text file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git log --oneline --graph --all
+* f5c63f5 (HEAD -> master) Created file2 text file
+| * 478d80f (mybranch) created a new file name file1
+|/
+* b1101be (second-branch) dummy commit
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ ls -a
+./  ../  .git/  dummy.txt  file1.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-branching/exercise (mybranch)
+$ git diff mybranch master
+diff --git a/file1.txt b/file2.txt
+similarity index 100%
+rename from file1.txt
+rename to file2.txt
