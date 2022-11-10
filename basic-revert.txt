@@ -1,0 +1,211 @@
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd basic-revert/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert (master)
+$ source setup.sh
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-revert’
+Try 'basename --help' for more information.
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/basic-revert/exercise/.git/
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-revert/exercise’
+Try 'basename --help' for more information.
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-revert/exercise’
+Try 'basename --help' for more information.
+[master (root-commit) 53f00aa] Add file greeting.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 greeting.txt
+warning: in the working copy of 'credentials.txt', LF will be replaced by CRLF the next time Git touches it
+[master 17beaf2] Add credentials to repository
+ 1 file changed, 1 insertion(+)
+ create mode 100644 credentials.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+[master e8463a0] Add content to greeting.txt
+ 1 file changed, 1 insertion(+)
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+[master 77b67fc] Overwrite greeting.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-revert/exercise’
+Try 'basename --help' for more information.
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-revert/exercise’
+Try 'basename --help' for more information.
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git log --oneline
+77b67fc (HEAD -> master) Overwrite greeting.txt
+e8463a0 Add content to greeting.txt
+17beaf2 Add credentials to repository
+53f00aa Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ cat greeting.txt
+This should have been appended to the original content, rather than overwriting it.
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git log
+commit 77b67fcb3819f7d9c719c77d96cb2702bc2b64a8 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:51 2022 +0530
+
+    Overwrite greeting.txt
+
+commit e8463a0681cf8ef932a6509943be7b7a03863011
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:50 2022 +0530
+
+    Add content to greeting.txt
+
+commit 17beaf2c14b826621600f52249535daf92af918e
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:49 2022 +0530
+
+    Add credentials to repository
+
+commit 53f00aab805526411a8369132b6bb4b0d5746046
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:48 2022 +0530
+
+    Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git revert 77b67fcb3819f7d9c719c77d96cb2702bc2b64a8
+[master a40b6c7] Overwrite greeting.txt"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git log --oneline
+a40b6c7 (HEAD -> master) Overwrite greeting.txt"
+77b67fc Overwrite greeting.txt
+e8463a0 Add content to greeting.txt
+17beaf2 Add credentials to repository
+53f00aa Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git log
+commit a40b6c7a0d10793deebefa7873a56f0341f4d623 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:35:20 2022 +0530
+
+    Overwrite greeting.txt"
+
+    This reverts commit 77b67fcb3819f7d9c719c77d96cb2702bc2b64a8.
+
+commit 77b67fcb3819f7d9c719c77d96cb2702bc2b64a8
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:51 2022 +0530
+
+    Overwrite greeting.txt
+
+commit e8463a0681cf8ef932a6509943be7b7a03863011
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:50 2022 +0530
+
+    Add content to greeting.txt
+
+commit 17beaf2c14b826621600f52249535daf92af918e
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:49 2022 +0530
+
+    Add credentials to repository
+
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ cat greeting.txt
+Original file content
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ ls
+credentials.txt  greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git log --oneline
+a40b6c7 (HEAD -> master) Overwrite greeting.txt"
+77b67fc Overwrite greeting.txt
+e8463a0 Add content to greeting.txt
+17beaf2 Add credentials to repository
+53f00aa Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git revert 17beaf2
+[master a1f8160] Revert "Add credentials to repository"
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 credentials.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git log --oneline
+a1f8160 (HEAD -> master) Revert "Add credentials to repository"
+a40b6c7 Overwrite greeting.txt"
+77b67fc Overwrite greeting.txt
+e8463a0 Add content to greeting.txt
+17beaf2 Add credentials to repository
+53f00aa Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ ls
+greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ ls -a
+./  ../  .git/  greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git ls-files
+greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git log
+commit a1f816075e7d419aacdcbd7fb0beab3a4c0c489d (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:37:52 2022 +0530
+
+    Revert "Add credentials to repository"
+
+    This reverts commit 17beaf2c14b826621600f52249535daf92af918e.
+
+commit a40b6c7a0d10793deebefa7873a56f0341f4d623
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:35:20 2022 +0530
+
+    Overwrite greeting.txt"
+
+    This reverts commit 77b67fcb3819f7d9c719c77d96cb2702bc2b64a8.
+
+commit 77b67fcb3819f7d9c719c77d96cb2702bc2b64a8
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:51 2022 +0530
+
+    Overwrite greeting.txt
+
+commit e8463a0681cf8ef932a6509943be7b7a03863011
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:50 2022 +0530
+
+    Add content to greeting.txt
+
+commit 17beaf2c14b826621600f52249535daf92af918e
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:49 2022 +0530
+
+    Add credentials to repository
+
+commit 53f00aab805526411a8369132b6bb4b0d5746046
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:31:48 2022 +0530
+
+    Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-revert/exercise (master)
+$ git show a1f816075e7d419aacdcbd7fb0beab3a4c0c489d
+commit a1f816075e7d419aacdcbd7fb0beab3a4c0c489d (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:37:52 2022 +0530
+
+    Revert "Add credentials to repository"
+
+    This reverts commit 17beaf2c14b826621600f52249535daf92af918e.
+
+diff --git a/credentials.txt b/credentials.txt
+deleted file mode 100644
+index 8995708..0000000
+--- a/credentials.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-supersecretpassword
