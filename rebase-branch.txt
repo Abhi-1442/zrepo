@@ -1,0 +1,142 @@
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd rebase-branch/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/rebase-branch/exercise/.git/
+[master (root-commit) 12e3705] Add file greeting.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 greeting.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+[master 63b008b] Add content to greeting.txt
+ 1 file changed, 1 insertion(+)
+Switched to a new branch 'uppercase'
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+[uppercase 7c33dad] Change greeting to uppercase
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Switched to branch 'master'
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[master 8861199] Add readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (master)
+$ git branch
+* master
+  uppercase
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (master)
+$ git log
+commit 88611998bf5e2819295c01236e62b91de02bf573 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:05 2022 +0530
+
+    Add readme
+
+commit 63b008b8dbf5a1c4cc7a05e2b694dfd7c61fe56d
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:03 2022 +0530
+
+    Add content to greeting.txt
+
+commit 12e37057abaaa249c5e483876921705173dd0bcb
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:02 2022 +0530
+
+    Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (master)
+$ git switch uppercase
+Switched to branch 'uppercase'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (uppercase)
+$ git log
+commit 7c33dad659ebec887bd3cd4262f8302db957bf86 (HEAD -> uppercase)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:04 2022 +0530
+
+    Change greeting to uppercase
+
+commit 63b008b8dbf5a1c4cc7a05e2b694dfd7c61fe56d
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:03 2022 +0530
+
+    Add content to greeting.txt
+
+commit 12e37057abaaa249c5e483876921705173dd0bcb
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:02 2022 +0530
+
+    Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (uppercase)
+$ git rebase master
+Successfully rebased and updated refs/heads/uppercase.
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (uppercase)
+$ git log
+commit caa35e4b5723cf65ac429730e7c7c8ae128d4f87 (HEAD -> uppercase)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:04 2022 +0530
+
+    Change greeting to uppercase
+
+commit 88611998bf5e2819295c01236e62b91de02bf573 (master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:05 2022 +0530
+
+    Add readme
+
+commit 63b008b8dbf5a1c4cc7a05e2b694dfd7c61fe56d
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:03 2022 +0530
+
+    Add content to greeting.txt
+
+commit 12e37057abaaa249c5e483876921705173dd0bcb
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:02 2022 +0530
+
+    Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (uppercase)
+$ git switch
+fatal: missing branch or commit argument
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (uppercase)
+$ git switch master
+Switched to branch 'master'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (master)
+$ git merge uppercase
+Updating 8861199..caa35e4
+Fast-forward
+ greeting.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/rebase-branch/exercise (master)
+$ git log
+commit caa35e4b5723cf65ac429730e7c7c8ae128d4f87 (HEAD -> master, uppercase)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:04 2022 +0530
+
+    Change greeting to uppercase
+
+commit 88611998bf5e2819295c01236e62b91de02bf573
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:05 2022 +0530
+
+    Add readme
+
+commit 63b008b8dbf5a1c4cc7a05e2b694dfd7c61fe56d
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:03 2022 +0530
+
+    Add content to greeting.txt
+
+commit 12e37057abaaa249c5e483876921705173dd0bcb
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:24:02 2022 +0530
+
+    Add file greeting.txt
