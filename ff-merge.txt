@@ -1,0 +1,102 @@
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd ff-merge/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/ff-merge/exercise/.git/
+[master (root-commit) f44a27b] Add file greeting.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 greeting.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+[master a605225] Add content to greeting.txt
+ 1 file changed, 1 insertion(+)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ git branch
+* master
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ git branch feature/uppercase
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ git branch
+  feature/uppercase
+* master
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ git switch feature/uppercase
+Switched to branch 'feature/uppercase'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ git status
+On branch feature/uppercase
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ ls -a
+./  ../  .git/  greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ cat greeting.txt
+hello
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ echo "HELLO" > greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ cat greeting.txt
+HELLO
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ git add greeting.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ git commit -m "Hello in capitals"
+[feature/uppercase 5e50d55] Hello in capitals
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ git branch
+* feature/uppercase
+  master
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ git log --oneline --graph --all
+* 5e50d55 (HEAD -> feature/uppercase) Hello in capitals
+* a605225 (master) Add content to greeting.txt
+* f44a27b Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (feature/uppercase)
+$ git switch master
+Switched to branch 'master'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ cat greeting.txt
+hello
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ git diff
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ git merge feature/uppercase
+Updating a605225..5e50d55
+Fast-forward
+ greeting.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ cat greeting.txt
+HELLO
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ git branch --delete feature/uppercase
+Deleted branch feature/uppercase (was 5e50d55).
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ git branch
+* master
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/ff-merge/exercise (master)
+$ cat greeting.txt
+HELLO
