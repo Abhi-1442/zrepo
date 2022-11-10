@@ -1,0 +1,345 @@
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd reset
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/reset/exercise/.git/
+warning: in the working copy of '1.txt', LF will be replaced by CRLF the next time Git touches it
+[master (root-commit) 89faf8f] 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 1.txt
+warning: in the working copy of '2.txt', LF will be replaced by CRLF the next time Git touches it
+[master 7afd763] 2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2.txt
+warning: in the working copy of '3.txt', LF will be replaced by CRLF the next time Git touches it
+[master fef2034] 3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 3.txt
+warning: in the working copy of '4.txt', LF will be replaced by CRLF the next time Git touches it
+[master b19f1e0] 4
+ 1 file changed, 1 insertion(+)
+ create mode 100644 4.txt
+warning: in the working copy of '5.txt', LF will be replaced by CRLF the next time Git touches it
+[master 035826a] 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 5.txt
+warning: in the working copy of '6.txt', LF will be replaced by CRLF the next time Git touches it
+[master 2ec8461] 6
+ 1 file changed, 1 insertion(+)
+ create mode 100644 6.txt
+warning: in the working copy of '7.txt', LF will be replaced by CRLF the next time Git touches it
+[master 52af505] 7
+ 1 file changed, 1 insertion(+)
+ create mode 100644 7.txt
+warning: in the working copy of '8.txt', LF will be replaced by CRLF the next time Git touches it
+[master 55bdc10] 8
+ 1 file changed, 1 insertion(+)
+ create mode 100644 8.txt
+warning: in the working copy of '9.txt', LF will be replaced by CRLF the next time Git touches it
+[master 42ea0c6] 9
+ 1 file changed, 1 insertion(+)
+ create mode 100644 9.txt
+warning: in the working copy of '10.txt', LF will be replaced by CRLF the next time Git touches it
+[master 973115f] 10
+ 1 file changed, 1 insertion(+)
+ create mode 100644 10.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ ls
+1.txt  10.txt  2.txt  3.txt  4.txt  5.txt  6.txt  7.txt  8.txt  9.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ ls -a
+./   .git/  10.txt  3.txt  5.txt  7.txt  9.txt
+../  1.txt  2.txt   4.txt  6.txt  8.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git log
+commit 973115ff306e0f82c3df45ae8ea951c6b7cfbaff (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:43 2022 +0530
+
+    10
+
+commit 42ea0c6d9678ccc876fa78d7bf19eabdbb925522
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:42 2022 +0530
+
+    9
+
+commit 55bdc10cf026a5ec948d507351ec93e02e9bd820
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:42 2022 +0530
+
+    8
+
+commit 52af50565513d1b0ed881c64a52fe06d56be49a5
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:41 2022 +0530
+
+    7
+
+commit 2ec8461cf7a94f19ef4315f7cb8cbb8c27aa3bbd
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:40 2022 +0530
+
+    6
+
+commit 035826ae354b4d7868875c9329e241303a613995
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:39 2022 +0530
+
+    5
+
+commit b19f1e04ce447c25dfb5ffcfaba212a204a64f16
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:38 2022 +0530
+
+    4
+
+commit fef20345e5a008a7e5d0270949554e85f6748767
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:37 2022 +0530
+
+    3
+
+commit 7afd763c740d02c2d5f019cc0d4d2aec581700b5
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:37 2022 +0530
+
+    2
+
+commit 89faf8f3eb0c0653fc509405db4363e44a315868
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:36 2022 +0530
+
+    1
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git diff --cached
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git diff --staged
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git log --oneline
+973115f (HEAD -> master) 10
+42ea0c6 9
+55bdc10 8
+52af505 7
+2ec8461 6
+035826a 5
+b19f1e0 4
+fef2034 3
+7afd763 2
+89faf8f 1
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git reset --soft HEAD~1
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ ls
+1.txt  10.txt  2.txt  3.txt  4.txt  5.txt  6.txt  7.txt  8.txt  9.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git log
+commit 42ea0c6d9678ccc876fa78d7bf19eabdbb925522 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:42 2022 +0530
+
+    9
+
+commit 55bdc10cf026a5ec948d507351ec93e02e9bd820
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:42 2022 +0530
+
+    8
+
+commit 52af50565513d1b0ed881c64a52fe06d56be49a5
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:41 2022 +0530
+
+    7
+
+commit 2ec8461cf7a94f19ef4315f7cb8cbb8c27aa3bbd
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:40 2022 +0530
+
+    6
+
+commit 035826ae354b4d7868875c9329e241303a613995
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:39 2022 +0530
+
+    5
+
+commit b19f1e04ce447c25dfb5ffcfaba212a204a64f16
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:38 2022 +0530
+
+    4
+
+commit fef20345e5a008a7e5d0270949554e85f6748767
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:37 2022 +0530
+
+    3
+
+commit 7afd763c740d02c2d5f019cc0d4d2aec581700b5
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:37 2022 +0530
+
+    2
+
+commit 89faf8f3eb0c0653fc509405db4363e44a315868
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:36 2022 +0530
+
+    1
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   10.txt
+
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git reset --mixed HEAD~1
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git log
+commit 55bdc10cf026a5ec948d507351ec93e02e9bd820 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:42 2022 +0530
+
+    8
+
+commit 52af50565513d1b0ed881c64a52fe06d56be49a5
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:41 2022 +0530
+
+    7
+
+commit 2ec8461cf7a94f19ef4315f7cb8cbb8c27aa3bbd
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:40 2022 +0530
+
+    6
+
+commit 035826ae354b4d7868875c9329e241303a613995
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:39 2022 +0530
+
+    5
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ ls
+1.txt  10.txt  2.txt  3.txt  4.txt  5.txt  6.txt  7.txt  8.txt  9.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        10.txt
+        9.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git reset --hard HEAD~1
+HEAD is now at 52af505 7
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ ls
+1.txt  10.txt  2.txt  3.txt  4.txt  5.txt  6.txt  7.txt  9.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git log
+commit 52af50565513d1b0ed881c64a52fe06d56be49a5 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:41 2022 +0530
+
+    7
+
+commit 2ec8461cf7a94f19ef4315f7cb8cbb8c27aa3bbd
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:40 2022 +0530
+
+    6
+
+commit 035826ae354b4d7868875c9329e241303a613995
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:39 2022 +0530
+
+    5
+
+commit b19f1e04ce447c25dfb5ffcfaba212a204a64f16
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:38 2022 +0530
+
+    4
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        10.txt
+        9.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git revert HEAD~1
+[master 2d540f4] Revert "6"
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 6.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ ls
+1.txt  10.txt  2.txt  3.txt  4.txt  5.txt  7.txt  9.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git log
+commit 2d540f4f2ab1e1ab2272a43b3d454f6c1ac81208 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 23:05:27 2022 +0530
+
+    Revert "6"
+
+    This reverts commit 2ec8461cf7a94f19ef4315f7cb8cbb8c27aa3bbd.
+
+commit 52af50565513d1b0ed881c64a52fe06d56be49a5
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:41 2022 +0530
+
+    7
+
+commit 2ec8461cf7a94f19ef4315f7cb8cbb8c27aa3bbd
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:40 2022 +0530
+
+    6
+
+commit 035826ae354b4d7868875c9329e241303a613995
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 22:54:39 2022 +0530
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/reset/exercise (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        10.txt
+        9.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
