@@ -1,0 +1,169 @@
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd merge-conflict/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/merge-conflict/exercise/.git/
+[master (root-commit) 18713ef] Add file greeting.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 greeting.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+[master d26b90f] Add content to greeting.txt
+ 1 file changed, 1 insertion(+)
+Switched to a new branch 'merge-conflict-branch1'
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[merge-conflict-branch1 07b57ee] add relevant fact
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+Switched to branch 'master'
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[master 7e6f764] add indispensable truth!
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ ls
+file.txt  greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ cat file.txt
+This is an indispensable truth!
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ cat greeting.txt
+hello
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ git branch
+* master
+  merge-conflict-branch1
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ git switch merge-conflict-branch1
+Switched to branch 'merge-conflict-branch1'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (merge-conflict-branch1)
+$ ls
+file.txt  greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (merge-conflict-branch1)
+$ cat file.txt
+This is a relevant fact
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (merge-conflict-branch1)
+$ cat greeting.txt
+hello
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (merge-conflict-branch1)
+$ git status
+On branch merge-conflict-branch1
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (merge-conflict-branch1)
+$ git log
+commit 07b57ee0b55d13204ec846bb92984bad041df844 (HEAD -> merge-conflict-branch1)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:59:42 2022 +0530
+
+    add relevant fact
+
+commit d26b90f68e19a53111a34ca8b85cf497992cce8a
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:59:41 2022 +0530
+
+    Add content to greeting.txt
+
+commit 18713ef2eb95244ff9487f278583af57e8703bce
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:59:40 2022 +0530
+
+    Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (merge-conflict-branch1)
+$ git switch master
+Switched to branch 'master'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ git log
+commit 7e6f764a1694b5e83d1c9b3c5f688dd114c2d298 (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:59:43 2022 +0530
+
+    add indispensable truth!
+
+commit d26b90f68e19a53111a34ca8b85cf497992cce8a
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:59:41 2022 +0530
+
+    Add content to greeting.txt
+
+commit 18713ef2eb95244ff9487f278583af57e8703bce
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:59:40 2022 +0530
+
+    Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ git merge merge-conflict-branch1
+Auto-merging file.txt
+CONFLICT (add/add): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master|MERGING)
+$ git add file.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master|MERGING)
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   file.txt
+
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master|MERGING)
+$ git log --oneline --graph
+* 7e6f764 (HEAD -> master) add indispensable truth!
+* d26b90f Add content to greeting.txt
+* 18713ef Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master|MERGING)
+$ git commit -m "staged the file"
+[master 13964d3] staged the file
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ git log --oneline --graph
+*   13964d3 (HEAD -> master) staged the file
+|\
+| * 07b57ee (merge-conflict-branch1) add relevant fact
+* | 7e6f764 add indispensable truth!
+|/
+* d26b90f Add content to greeting.txt
+* 18713ef Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/merge-conflict/exercise (master)
+$ cat file.txt
+<<<<<<< HEAD
+This is an indispensable truth!
+=======
+This is a relevant fact
+>>>>>>> merge-conflict-branch1
