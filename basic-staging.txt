@@ -1,0 +1,164 @@
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd basic-staging
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging (master)
+$ source setup.sh
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-staging’
+Try 'basename --help' for more information.
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/basic-staging/exercise/.git/
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-staging/exercise’
+Try 'basename --help' for more information.
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-staging/exercise’
+Try 'basename --help' for more information.
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[master (root-commit) 6121202] 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-staging/exercise’
+Try 'basename --help' for more information.
+basename: extra operand ‘Reddy/ZDay-1/git-katas/basic-staging/exercise’
+Try 'basename --help' for more information.
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ ls
+file.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ cat file.txt
+1
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ echo 2 > file.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git diff
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/file.txt b/file.txt
+index d00491f..0cfbf08 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-1
++2
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git diff --staged
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git diff
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git diff --staged
+diff --git a/file.txt b/file.txt
+index d00491f..0cfbf08 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-1
++2
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ echo 3 > file.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git diff
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/file.txt b/file.txt
+index 0cfbf08..00750ed 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-2
++3
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git diff --staged
+diff --git a/file.txt b/file.txt
+index d00491f..0cfbf08 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-1
++2
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git restore --staged file.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git commit -m "It is file.txt file"
+[master 06bd297] It is file.txt file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git log
+commit 06bd297d124603d8a55e515ecfbb72e8cec80a1a (HEAD -> master)
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:17:07 2022 +0530
+
+    It is file.txt file
+
+commit 6121202e89f9ea60adfa9b4efd0d4292432f8b13
+Author: Abhinay <abhinay1442@gmail.com>
+Date:   Wed Nov 9 21:13:34 2022 +0530
+
+    1
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ echo 4 > file.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ cat file.txt
+4
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git restore file.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ cat file.txt
+3
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/basic-staging/exercise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
