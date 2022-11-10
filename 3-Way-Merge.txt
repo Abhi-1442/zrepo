@@ -1,0 +1,118 @@
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas (master)
+$ cd 3-way-merge/
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/Likki. Abhinay Reddy/ZDay-1/git-katas/3-way-merge/exercise/.git/
+[master (root-commit) 9580cd0] Add file greeting.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 greeting.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+[master 2f1ce24] Add content to greeting.txt
+ 1 file changed, 1 insertion(+)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git branch
+* master
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ ls
+greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ cat greeting.txt
+hello
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git branch greeting
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git switch greeting
+Switched to branch 'greeting'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (greeting)
+$ cat greeting.txt
+hello
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (greeting)
+$ echo "Hi there!" > greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (greeting)
+$ git add greeting.txt
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (greeting)
+$ git commit -m "Edited the content in greeting file"
+[greeting 2bff4ab] Edited the content in greeting file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (greeting)
+$ git switch master
+Switched to branch 'master'
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ touch README.md
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ echo "This file contains info about the repository" > README.md
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ cat README.md
+This file contains info about the repository
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git commit -m "Created README.md file and added some info in it"
+[master 97adffe] Created README.md file and added some info in it
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git log --oneline --graph --all
+* 97adffe (HEAD -> master) Created README.md file and added some info in it
+| * 2bff4ab (greeting) Edited the content in greeting file
+|/
+* 2f1ce24 Add content to greeting.txt
+* 9580cd0 Add file greeting.txt
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git diff master greeting
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index ec3ce8f..0000000
+--- a/README.md
++++ /dev/null
+@@ -1 +0,0 @@
+-This file contains info about the repository
+diff --git a/greeting.txt b/greeting.txt
+index ce01362..137d409 100644
+--- a/greeting.txt
++++ b/greeting.txt
+@@ -1 +1 @@
+-hello
++Hi there!
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git merge greeting
+Merge made by the 'ort' strategy.
+ greeting.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Likki. Abhinay Reddy@LAPTOP-Q095STBU MINGW64 ~/ZDay-1/git-katas/3-way-merge/exercise (master)
+$ git log --oneline --graph --all
+*   8eed8ba (HEAD -> master) Merge branch 'greeting'
+|\
+| * 2bff4ab (greeting) Edited the content in greeting file
+* | 97adffe Created README.md file and added some info in it
+|/
+* 2f1ce24 Add content to greeting.txt
+* 9580cd0 Add file greeting.txt
